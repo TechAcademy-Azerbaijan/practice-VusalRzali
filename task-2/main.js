@@ -1,26 +1,16 @@
-const prompt = require('prompt');
+const prompt = require("prompt");
 prompt.start();
-
-prompt.get('input', function (err, result) {
-    let number = parseInt(result.input)
-    let isPrime = true;
-
-    
-if (number === 1) {
-    console.log("1 is neither prime nor composite number.");
-}
-else if (number > 1) {
-       for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-            isPrime = false;
-            break;
-        }
-    }  if (isPrime) {
-        console.log(`${number} is a prime number`);
-    } else {
-        console.log(`${number} is a not prime number`);
+prompt.get("input", function (err, result) {
+  let eded = parseInt(result.input);
+  var result = false;
+  for (i = 2; i < eded; i++) {
+    if (eded % i === 0) {
+        result = true
+        console.log('No');
+        break;
     }
-}else {
-    console.log("The number is not a prime number.");
-}
-})
+  }
+  if(result === false){
+    console.log('Yes');
+  }
+});
